@@ -1,4 +1,5 @@
-# Nivel_2_SODVI GDD
+# GDD
+# AXOLOT OUT OF THE TANK
 # Descripción General:
  
 Un juego plataformero 2D combinado con puzzles y suspenso, donde la habilidad de salto y el ingenio se combinan para resolver “rompecabezas” en niveles diseñados con intrincados mecanismos.
@@ -97,6 +98,8 @@ Botones de movimiento izquierda y derecha, salto y de interacción. También ven
 Van a haber cuadros de texto donde se cuente la historia del laboratorio y nombres de salas. 
 
 # Diseño de menús: 
+
+![Image](https://github.com/user-attachments/assets/fbf6e668-2928-4caf-86f1-745905710667)
 
 # Características artísticas: 
 
