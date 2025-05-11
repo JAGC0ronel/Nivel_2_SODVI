@@ -1,4 +1,4 @@
-# Nivel_2_SODVI
+# Nivel_2_SODVI GDD
 # Descripción General:
  
 Un juego plataformero 2D combinado con puzzles y suspenso, donde la habilidad de salto y el ingenio se combinan para resolver “rompecabezas” en niveles diseñados con intrincados mecanismos.
