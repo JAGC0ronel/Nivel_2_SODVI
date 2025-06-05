@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-
+    public Animator animator;
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("PlataformaMovil"))
@@ -55,14 +56,18 @@ public class PlayerScript : MonoBehaviour
             salto = true;   
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        float velocidadX = 0f;
+
         if (derecha)
         {
+            velocidadX = -Velocidad;
             rb.AddForce(new Vector2 (-Velocidad, 0)*Time.deltaTime);
         }
         if (izquierda)
         {
+            velocidadX = Velocidad;
             rb.AddForce(new Vector2(Velocidad, 0) * Time.deltaTime);
         }
         if (salto)
@@ -70,5 +75,7 @@ public class PlayerScript : MonoBehaviour
             salto = false;
             rb.AddForce(new Vector2(0, saltoalto));
         }
+
+        animator.SetFloat("movement", Mathf.Abs(velocidadX*Velocidad));
     }
 }

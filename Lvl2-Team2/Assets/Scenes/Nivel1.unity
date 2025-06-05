@@ -768,7 +768,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5248508, y: 0.401468}
-    oldSize: {x: 3.53125, y: 2.375}
+    oldSize: {x: 2.825, y: 1.9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -838,8 +838,8 @@ Transform:
   m_GameObject: {fileID: 1122106424}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.12, y: -2.63, z: 0}
-  m_LocalScale: {x: 0.61877346, y: 0.61903626, z: 0.65715104}
+  m_LocalPosition: {x: -9.1244, y: -3.2093, z: 0}
+  m_LocalScale: {x: 0.9228028, y: 1.0266798, z: 0.7540594}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -856,6 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0abb6a7a1181b9746a7dc4400790fd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1122106430}
   rb: {fileID: 1122106425}
   Velocidad: 3700
   saltoalto: 1700
