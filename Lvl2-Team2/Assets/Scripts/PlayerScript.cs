@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.StandaloneInputModule;
 
 public class PlayerScript : MonoBehaviour
 {
     public Animator animator;
-
+    private bool mirarIzquierda = true;
     bool derecha = false;
     bool izquierda = false;
     bool salto = false;
-    bool Ensuelo;
+    bool EnSuelo;
 
     public Rigidbody2D rb;
     public float Velocidad;
@@ -48,12 +49,24 @@ public class PlayerScript : MonoBehaviour
         {
             velocidadX = -Velocidad;
             rb.AddForce(new Vector2(-Velocidad, 0) * Time.deltaTime);
+
+            // Si estamos yendo a la derecha pero miramos a la izquierda, giramos
+            if (!mirarIzquierda)
+            {
+                Flip();
+            }
         }
 
         if (izquierda)
         {
             velocidadX = Velocidad;
             rb.AddForce(new Vector2(Velocidad, 0) * Time.deltaTime);
+
+            // Si estamos yendo a la izquierda pero miramos a la derecha, giramos
+            if (mirarIzquierda)
+            {
+                Flip();
+            }
         }
 
         if (salto)
@@ -63,7 +76,23 @@ public class PlayerScript : MonoBehaviour
         }
 
         // Actualiza el parámetro del animator
-        animator.SetFloat("movement", Mathf.Abs(velocidadX * Velocidad));
+        animator.SetFloat("movement", Mathf.Abs(velocidadX));
+    }
+
+    // Método para girar el sprite
+    void Flip()
+    {
+        // Cambia el estado de la dirección
+        mirarIzquierda = !mirarIzquierda;
+
+        // Obtiene la escala actual
+        Vector3 escala = transform.localScale;
+
+        // Invierte la escala en X
+        escala.x *= -1;
+
+        // Aplica la nueva escala
+        transform.localScale = escala;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

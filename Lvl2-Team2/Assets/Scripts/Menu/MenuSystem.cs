@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuSystem : MonoBehaviour
 {
+    [SerializeField] private string sceneName; // Nombre de la escena a cargar
     public void Play()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(sceneName);
     }
     
     public void Exit()

@@ -31,34 +31,30 @@ public class Plataforma : MonoBehaviour
 
     IEnumerator MoverPlataforma()
     {
+        // Definir los dos puntos de destino
+        Vector3 destinoIzquierda = posicionInicial + Vector3.left * distancia;
+        Vector3 destinoDerecha = posicionInicial + Vector3.right * distancia;
+
+        // Comenzar moviéndose hacia la izquierda (o el primer destino)
+        Vector3 destinoActual = destinoIzquierda;
+        Vector3 siguienteDestino = destinoDerecha;
+
         while (movimientoActivado)
         {
-            Vector3 destinoIzquierda = posicionInicial + Vector3.left * distancia;
-            Vector3 destinoDerecha = posicionInicial + Vector3.right * distancia;
-
-            while (Vector3.Distance(transform.position, destinoIzquierda) > 0.1f)
+            // Moverse hacia el destino actual
+            while (Vector3.Distance(transform.position, destinoActual) > 0.1f)
             {
-                rb.MovePosition(Vector3.MoveTowards(transform.position, destinoIzquierda, velocidad * Time.fixedDeltaTime));
+                rb.MovePosition(Vector3.MoveTowards(transform.position, destinoActual, velocidad * Time.fixedDeltaTime));
                 yield return new WaitForFixedUpdate();
             }
 
+            // Esperar en el destino
             yield return new WaitForSeconds(tiempoEspera);
 
-            while (Vector3.Distance(transform.position, destinoDerecha) > 0.1f)
-            {
-                rb.MovePosition(Vector3.MoveTowards(transform.position, destinoDerecha, velocidad * Time.fixedDeltaTime));
-                yield return new WaitForFixedUpdate();
-            }
-
-            yield return new WaitForSeconds(tiempoEspera);
-
-            while (Vector3.Distance(transform.position, posicionInicial) > 0.1f)
-            {
-                rb.MovePosition(Vector3.MoveTowards(transform.position, posicionInicial, velocidad * Time.fixedDeltaTime));
-                yield return new WaitForFixedUpdate();
-            }
-
-            yield return new WaitForSeconds(tiempoEspera);
+            // Intercambiar destinos para el próximo movimiento
+            Vector3 temp = destinoActual;
+            destinoActual = siguienteDestino;
+            siguienteDestino = temp;
         }
     }
 }
