@@ -5,25 +5,6 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public Animator animator;
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("PlataformaMovil"))
-        {
-            // Hacer que el jugador sea hijo de la plataforma
-            transform.SetParent(collision.transform);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("PlataformaMovil"))
-        {
-            // Dejar de ser hijo de la plataforma
-            transform.SetParent(null);
-        }
-    }
-
 
     bool derecha = false;
     bool izquierda = false;
@@ -38,14 +19,17 @@ public class PlayerScript : MonoBehaviour
     {
         derecha = true;
     }
-    public void noderecha() 
+
+    public void noderecha()
     {
         derecha = false;
     }
+
     public void irizquierda()
     {
         izquierda = true;
     }
+
     public void noizquierda()
     {
         izquierda = false;
@@ -53,7 +37,7 @@ public class PlayerScript : MonoBehaviour
 
     public void saltar()
     {
-            salto = true;   
+        salto = true;
     }
 
     private void Update()
@@ -63,19 +47,45 @@ public class PlayerScript : MonoBehaviour
         if (derecha)
         {
             velocidadX = -Velocidad;
-            rb.AddForce(new Vector2 (-Velocidad, 0)*Time.deltaTime);
+            rb.AddForce(new Vector2(-Velocidad, 0) * Time.deltaTime);
         }
+
         if (izquierda)
         {
             velocidadX = Velocidad;
             rb.AddForce(new Vector2(Velocidad, 0) * Time.deltaTime);
         }
+
         if (salto)
         {
             salto = false;
             rb.AddForce(new Vector2(0, saltoalto));
         }
 
-        animator.SetFloat("movement", Mathf.Abs(velocidadX*Velocidad));
+        // Actualiza el parámetro del animator
+        animator.SetFloat("movement", Mathf.Abs(velocidadX * Velocidad));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlataformaMovil"))
+        {
+            // Espera un frame antes de asignar el padre para evitar errores
+            StartCoroutine(AsignarPadreDespues(collision.transform));
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlataformaMovil"))
+        {
+            transform.SetParent(null);
+        }
+    }
+
+    private IEnumerator AsignarPadreDespues(Transform nuevaPlataforma)
+    {
+        yield return null; // espera 1 frame
+        transform.SetParent(nuevaPlataforma);
     }
 }
