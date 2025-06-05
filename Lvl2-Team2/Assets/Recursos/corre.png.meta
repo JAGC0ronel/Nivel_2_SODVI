@@ -130,14 +130,14 @@ TextureImporter:
         y: 433
         width: 113
         height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5248508, y: 0.401468}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4a57c22bfde68e4b8f2a8ac57d559bf
+      spriteID: 6235b1b3d3e575844afdccd5458b43e0
       internalID: 474973775
       vertices: []
       indices: 
@@ -158,7 +158,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 627a407d255872c4eabc0cdadf074727
+      spriteID: df5f3da729e4c40499ac4ab94edf2a6e
       internalID: -763536313
       vertices: []
       indices: 
@@ -179,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723f5ba4bbf7f084ab240190e01ca277
+      spriteID: 9907615dad9ac3d42a0ddfcbcee2feaf
       internalID: -2080294596
       vertices: []
       indices: 
@@ -200,7 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fcbb9f65daa16446926872556947ea5
+      spriteID: bb649324c5182f24cb88448fc98e425a
       internalID: 545500950
       vertices: []
       indices: 
@@ -221,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c381d4d4a41e4354092c36d15f8a48bc
+      spriteID: 7ff0ee293487ddd44ad6f058392e0f26
       internalID: -1251528589
       vertices: []
       indices: 
@@ -242,7 +242,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50967002626a85142a75c94daef3b1c4
+      spriteID: 91d0ac69c00caee409bfa9fa22e47917
       internalID: -1200369745
       vertices: []
       indices: 
@@ -263,7 +263,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5307085ce48324a4d8bd78118326f646
+      spriteID: 4a551e7d5d4289549ba4e6a2d8e4fa8b
       internalID: 1781116510
       vertices: []
       indices: 
@@ -284,7 +284,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5067e5174b671074cb3fbc7abfbba26c
+      spriteID: 13f6e6c6a679a974e979ec6b3c80e773
       internalID: 1394215698
       vertices: []
       indices: 
@@ -305,7 +305,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50fbd5d5fe10dfa4cb2a0a16e4dc8b88
+      spriteID: 5662b0cbd4e075e43912abe9a6b3dd9f
       internalID: 1433383852
       vertices: []
       indices: 
@@ -326,7 +326,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed39e899541dbce459690073018a722c
+      spriteID: 35b457ce46a6c67428de3d01fbebaf54
       internalID: 1964282266
       vertices: []
       indices: 
@@ -347,7 +347,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26d9206855aecdf4687efbb23d43330a
+      spriteID: f7865218006042c49b38e9f6b703805d
       internalID: -265656846
       vertices: []
       indices: 
@@ -368,7 +368,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cb6cecf62e54da45a3766b771cdaa87
+      spriteID: 42fbc564a6c9c9743aaf110d12b4294d
       internalID: 1360374993
       vertices: []
       indices: 
@@ -387,16 +387,16 @@ TextureImporter:
     nameFileIdTable:
       ajolote-remove_0: 474973775
       ajolote-remove_1: -763536313
-      ajolote-remove_10: -265656846
-      ajolote-remove_11: 1360374993
-      ajolote-remove_2: -2080294596
-      ajolote-remove_3: 545500950
-      ajolote-remove_4: -1251528589
-      ajolote-remove_5: -1200369745
-      ajolote-remove_6: 1781116510
-      ajolote-remove_7: 1394215698
-      ajolote-remove_8: 1433383852
-      ajolote-remove_9: 1964282266
+      ajolote-remove_10: -2080294596
+      ajolote-remove_11: 545500950
+      ajolote-remove_2: -1251528589
+      ajolote-remove_3: -1200369745
+      ajolote-remove_4: 1781116510
+      ajolote-remove_5: 1394215698
+      ajolote-remove_6: 1433383852
+      ajolote-remove_7: 1964282266
+      ajolote-remove_8: -265656846
+      ajolote-remove_9: 1360374993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
